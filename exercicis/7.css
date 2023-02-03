@@ -1,0 +1,127 @@
+body{
+    background-color: #181733;
+}
+header{
+
+  text-align: center;
+}
+#tit{
+    color: rgb(247, 189, 0);
+    font-size: 60px;
+}
+#fotoindex{
+    width: 200px;
+    align-content: center;
+    justify-content: center;
+
+}
+
+/*MENU*/
+
+nav{
+    font-size: 40px;
+    background-color: #ad002e;
+}
+
+nav li{
+    background-color: #0f0096;
+}
+
+
+
+p{
+    border-style: solid; border-color:blue;
+    margin: auto;
+    color: white;
+}
+li, ul{
+    background-color:cadetblue;
+    color: aqua;
+    padding: 0,0;
+    margin: 2px,2px;
+    display: inline-block;
+}
+section{
+    text-align: center;
+    margin: 90px;
+    display: flex;
+}
+
+a{
+    color:rgb(218, 178, 0);
+}
+.article1{
+    background-color:lime;
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ad002e+0,0f0096+100 */
+background: #ad002e; /* Old browsers */
+background: -moz-linear-gradient(top,  #ad002e 0%, #0f0096 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #ad002e 0%,#0f0096 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #ad002e 0%,#0f0096 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad002e', endColorstr='#0f0096',GradientType=0 ); /* IE6-9 */
+    border: 2px solid black;
+    margin: 10px,10px;
+    padding: 10px;
+    display: inline-block;
+    width: 20%;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    opacity: 0.9;
+    border-radius: 50px;
+    box-shadow: 10px 3px 10px rgb(18, 68, 11);
+}
+h1{
+    color: rgb(247, 189, 0);
+}
+
+.article1 img{
+    width: 200px;
+}
+.logo{
+    height: 20px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 1%;
+}
+
+/*PRODUCTES*/
+
+#pantalons{
+    width: 250px;
+
+}
+#jaqueta{
+    width: 350px;
+}
+#mitgetes{
+    width: 200px;
+}
+/* formulari*/
+
+form{
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    border-style:double;
+    border-width: 20px;
+    border-color: #ad002e;
+    color: rgb(233, 171, 0);
+    font-size: large;
+}
+
+/*footer*/
+
+footer{
+    background-color: #181733;
+    height: 5%;
+    text-align: center;
+    margin: auto;
+    color: aliceblue;
+  }
+footer a{
+    color: white;
+    margin: auto;
+}
