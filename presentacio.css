@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  /* HEADER */
+  .img{
+    text-align: center;
+  }
+  .img img{
+    width: 300px;
+  }
+  /* BARRA NAVEGACIÓ */
+  nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 2s ease;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  /* */
+
+  h1, h2 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 24px;
+    color: #666;
+  }
+  p {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  li {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  a {
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  button{
+    text-align: center;
+}
+.curriculum{
+text-align: center;
+}
+/* EXERCICIS */
+.exercicis ul{
+    margin: 0 auto;
+    max-width: 100px;
+    text-align: center;
+    background-color: aqua;
+}
+.exercicis li{
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid green;
+  background-color: rgb(154, 154, 154);
+
+}
+.exercicis li a{
+  color: black;
+}
+
+/* CONTACTE */
+.logo{
+  height: 25px;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+
+}
+#contactes{
+  list-style: none;
+    margin: 0 auto;
+    max-width: 200px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
