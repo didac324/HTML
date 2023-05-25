@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body{
+    background-color: rgb(95, 1, 1);
+    text-align: center;
+  }
+  h1{
+    font-style: italic;
+    font-size: 590%;
+    color: rgb(255, 255, 255);
+  }
+  p{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+  }
+  button{
+    font-size: 255%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+  }
+  #timer{
+    font-size: 25px;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    border-style: double;
+    border-width: 20px;
+    border-color: rgb(0, 60, 255);
+    color: rgb(255, 255, 255);
+  }
+  img{
+    border-style: solid; 
+    border-color:rgb(0, 47, 255);
+    border-width: 10px;
+  }
+  h3{
+    color: white;
+    font-size: 250%;
+  }
+  li, ul{
+    background-color:rgb(0, 255, 21);
+    color: rgb(0, 0, 0);
+    padding: 0,0;
+    margin: 2px,2px;
+    margin: 10px;
+}
+  
+</style>
+<head>
+  <title>Javascript Quiz</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Javascript Quiz</h1>
+  <p>Aquest programa et mostrara 10 imatges relacionades amb Javascript i tindras que escollir la resposta correcta</p>
+  <button id="startBtn" onclick="startQuiz()">Iniciar el test</button>
+  <div id="timer"></div>
+  <div id="questionContainer" style="display: none;">
+    <img id="questionImage" src="" >
+    <h3 id="question"></h3>
+    <ul id="answers">
+      <li><button onclick="checkAnswer(0)"></button></li>
+      <li><button onclick="checkAnswer(1)"></button></li>
+      <li><button onclick="checkAnswer(2)"></button></li>
+    </ul>
+  </div>
+  <div id="resultContainer" style="display: none;">
+    <h3>Estadística</h3>
+    <p id="score"></p>
+    <button onclick="restartQuiz()">Tornar a començar</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<script>
+    var questions = [
+  {
+    image: "1.png",
+    question: "Què mostrarà?: ",
+    answers: ["NaN", "15", "105"],
+    correctAnswer: 0
+  },
+  {
+    image: "2.png",
+    question: "Aquest codi funciona?: ",
+    answers: ["Sí i mostra 10", "Sí i mostra 25", "No"],
+    correctAnswer: 1
+  },
+  {
+    image: "3.png",
+    question: "Aquest codi funciona?: ",
+    
+
+    answers: ["No", "sí i mostra: 7", "sí i mostra  57"],
+    correctAnswer: 0
+  },
+  {
+    image: "4.png",
+
+    question: " Quin valor mostrarà alert?",
+    answers: ["1","5","0"],
+    correctAnswer: 1
+  },
+  {
+    image: "5.png",
+
+    question: "Aquest codi funciona?: ",
+    answers: [" No", "sí i mostra  0"," sí i mostra 1"],
+    correctAnswer: 2
+  },
+  {
+    image: "6.png",
+    question: "Quin valor mostra?: ",
+    answers: ["true", "2 €", "10 €"],
+    correctAnswer: 1
+  },
+  {
+    image: "7.png",
+
+    question: "Quin valor mostra alert? ",
+    answers: ["8", "6", "5"],
+    correctAnswer: 0
+  },
+  {
+    image: "8.png",
+
+    question: "Què mostrarà per pantalla?: ",
+    answers: ["Volvo Saab Ford", "Saab Ford", "Ford"],
+    correctAnswer: 2
+  },
+  {
+    image: "9.png",
+
+    question: "Què mostrarà a la pantalla?: ",
+    answers: [" Juanito", "Maria", "Juanito Maria"],
+    correctAnswer: 1
+  },
+  {
+    image: "10.png",
+
+    question: "Què mostrarà l’alert?: ",
+    answers: [ "L1", "L2", "demo2"],
+    correctAnswer: 1
+  },
+  // Aquí s'inclourien les altres preguntes...
+];
+
+var currentQuestionIndex = 0;
+var score = 0;
+var timerInterval;
+
+
+function startQuiz() {
+  var startBtn = document.getElementById("startBtn");
+  startBtn.style.display = "none";
+
+  var questionContainer = document.getElementById("questionContainer");
+  questionContainer.style.display = "block";
+
+  showQuestion();
+  startTimer();
+}
+
+function showQuestion() {
+  var question = questions[currentQuestionIndex];
+  var questionImage = document.getElementById("questionImage");
+  questionImage.src = question.image; // Aquí s'assignaria la URL de la imatge
+
+  var questionText = document.getElementById("question");
+  questionText.textContent = question.question;
+  
+  document
+
+  var answerButtons = document.getElementById("answers").getElementsByTagName("button");
+  for (var i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].textContent = question.answers[i];
+  }
+}
+
+function checkAnswer(answerIndex) {
+  var question = questions[currentQuestionIndex];
+  if (answerIndex === question.correctAnswer) {
+    score++;
+  }
+
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    endQuiz();
+  }
+}
+
+function startTimer() {
+  var timerElement = document.getElementById("timer");
+  var secondsLeft = 300; // Temps límit per cada pregunta
+
+  timerInterval = setInterval(function() {
+    secondsLeft--;
+    timerElement.textContent = "Temps restant: " + secondsLeft + " segons";
+
+    if (secondsLeft === 0) {
+      clearInterval(timerInterval);
+      endQuiz();
+    }
+  }, 1000);
+}
+
+function endQuiz() {
+  clearInterval(timerInterval);
+
+  var questionContainer = document.getElementById("questionContainer");
+  questionContainer.style.display = "none";
+
+  var resultContainer = document.getElementById("resultContainer");
+  resultContainer.style.display = "block";
+
+  var scoreText = document.getElementById("score");
+  scoreText.textContent = "Preguntes respostes: " + questions.length + ", Correctes: " + score + ", Puntuació total: " + score * 1;
+
+  saveHighScore(score);
+}
+
+function restartQuiz() {
+  var resultContainer = document.getElementById("resultContainer");
+  resultContainer.style.display = "none";
+
+  var startBtn = document.getElementById("startBtn");
+  startBtn.style.display = "block";
+
+  currentQuestionIndex = 0;
+  score = 0;
+}
+
+function saveHighScore(score) {
+  var highScore = localStorage.getItem("highScore");
+  if (!highScore || score > highScore) {
+    localStorage.setItem("highScore", score);
+  }
+}
+
+</script>
