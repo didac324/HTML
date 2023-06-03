@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lionel Messi with an orc axe
+* source:	https://sketchfab.com/3d-models/lionel-messi-with-an-orc-axe-4dff9f3d39604806ae2dccee64abe35f
+* author:	Garjill (https://sketchfab.com/gerard.charrier)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lionel Messi with an orc axe" (https://sketchfab.com/3d-models/lionel-messi-with-an-orc-axe-4dff9f3d39604806ae2dccee64abe35f) by Garjill (https://sketchfab.com/gerard.charrier) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
