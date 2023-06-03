@@ -19,7 +19,7 @@
       <img id="imgFantasma" src="assets/amador.jpg" >
       <img id="imgCasa" src="assets/pati.jpg.JPG" >
       <img id="imgfermin" src="assets/fermin.jpg">
-      <a-asset-item id="dracula" src="assets/torrente.jpg"></a-asset-item>
+      <a-asset-item id="dracula" src="assets/dracula/scene.gltf"></a-asset-item>
     </a-assets>
    
     <a-entity camera look-controls wasd-controls="false">
@@ -40,16 +40,15 @@
    
    
       <a-sky src="#imgCasa"></a-sky>
-      <a-sphere position="5 2 -5" radius="2"  src="#imgFantasma"
+      <a-sphere position="5 2 -5" radius="5"  src="#imgFantasma"
                 animation="property: rotation; dur: 10000;
                        to: 0 360 0; loop: true">          
        </a-sphere>
       <a-entity gltf-model="#dracula" position="0 -3.5 -5" scale="0.02 0.02 0.02"
                 animation="property: position; dur: 2000; from: 0 -3.5 -5; to: 0 -3 -5; dir: alternate; loop: true">        
       </a-entity>
-      <a-plane position="-6.5 0 1.5" src="#imgSortida" rotation="0 150 0"  transparent="true" mylink="href: https://www.wikipedia.org/;"></a-plane>
-      <a-plane position="1.5 0 3.5" src="#imgfermin" rotation="0 150 0" animation="property: rotation; dur: 10000;
-                       to: 0 0 160; loop: true"></a-plane>
+      <a-plane position="-1.5 0 1.5" src="#imgSortida" rotation="0 150 0"  transparent="true" mylink="href: https://www.wikipedia.org/;"></a-plane>
+      <a-plane position="-3 0 1.5" src="#imgfermin" rotation="0 150 0"></a-plane>
     </a-scene>
   </body>
 </html>
