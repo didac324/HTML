@@ -15,13 +15,13 @@
   <body>
   <a-scene cursor="rayOrigin: mouse">
     <a-assets>
-      <img id="imgSortida" src="assets/amador.jpg" >
-      <img id="imgFantasma" src="assets/caratorrente.jpg" >
+      <img id="imgAmador" src="assets/amador.jpg" >
+      <img id="imgTorrente" src="assets/caratorrente.jpg" >
       <img id="imgCasa" src="assets/pati.jpg.JPG" >
       <img id="imgfermin" src="assets/fermin.jpg">
       <img id="torrente" src="assets/torrente.jpg">
       <img id="futbol" src="assets/amador-futbol.jpg">
-      <a-asset-item id="dracula" src="assets/dracula/lionel_messi_with_an_orc_axe/scene.gltf"></a-asset-item>
+      <a-asset-item id="messi" src="assets/dracula/lionel_messi_with_an_orc_axe/scene.gltf"></a-asset-item>
     </a-assets>
    
     <a-entity camera look-controls wasd-controls="false">
@@ -44,18 +44,18 @@
 
     
       <a-sky src="#imgCasa"></a-sky>
-      <a-sphere position="5 0 -5" radius="3"  src="#imgFantasma"
+      <a-sphere position="5 0 -5" radius="3"  src="#imgTorrente"
                 animation="property: rotation; dur: 10000;
                        to: 0 360 0; loop: true">          
        </a-sphere>
     
-      <a-entity gltf-model="#dracula" position="-5 -3.5 -5" scale="0.05 0.05 0.05"
+      <a-entity gltf-model="#messi" position="-5 -3.5 -5" scale="0.05 0.05 0.05"
                   animation="property: rotation; dur: 20000;
                        to: 0 360 0; loop: true">        
       </a-entity>       
       </a-plane>
       
-      <a-plane position="-2.5 0 1" src="#imgSortida" rotation="0 150 0"  transparent="true" mylink="href: https://seriesespanolas.fandom.com/wiki/Amador_Rivas;" animation="
+      <a-plane position="-2.5 0 1" src="#imgAmador" rotation="0 150 0"  transparent="true" mylink="href: https://seriesespanolas.fandom.com/wiki/Amador_Rivas;" animation="
         property: scale;
         from: 1 1 1;
         to: 2 2 2;
